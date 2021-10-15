@@ -1,0 +1,17 @@
+app:
+  port: 3000
+
+db:
+  host: localhost
+  user: tomisar
+  password: tomisar123
+  database: ecommerce
+
+mongodb:
+  uri: 'mongodb://ecommerce:ecommerce@localhost:27017/ecommerce11'
+
+facebook:
+  id: 1041418119918166
+  secret2: 7266d871fc4da9b904325f438f2a8703
+
+secret: adsjkbghjka439752

@@ -1,0 +1,27 @@
+<div class="wrapper fadeInDown">
+	<div id="formContent">
+		<!-- Tabs Titles -->
+
+		<!-- Icon -->
+		<div class="fadeIn first">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/250px-Bootstrap_logo.svg.png" id="icon" alt="User Icon" />
+		</div>
+
+		<!-- Login Form -->
+		<form id="login" method="POST" action="/login" >
+			<input type="text" id="user" class="fadeIn second" name="user" placeholder="user">
+			<input type="text" id="password" class="fadeIn third" name="password" placeholder="password" >
+			<input type="submit" class="fadeIn fourth" value="Log In">
+			<a href="/auth/facebook" class="fadeIn fourth"><span class="fa fa-facebook"></span> Login con Facebook</a>
+		</form>
+
+		<!-- Remind Passowrd -->
+		<div id="formFooter">
+			<button class="btn btn-success my-3" onclick="goSignup()">SIGNUP</button>
+		</div>
+		<div id="formFooter">
+			<a class="underlineHover" href="#">Forgot Password?</a>
+		</div>
+	</div>
+</div>
+	

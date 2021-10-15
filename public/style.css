@@ -1,0 +1,70 @@
+*{
+	margin:5px;
+}
+.nav{
+	margin-bottom: 10px;
+	background-color: rgb(177, 238, 148);
+	border-radius: 10px;
+}
+.body{
+	background-color: rgb(221, 221, 221);
+	height: 100%;
+	border-radius: 10px;
+}
+h1{
+	color:rgb(37, 34, 197);
+}
+label{
+	font-style:italic ;
+}
+input{
+	display: block;
+}
+label{
+	display: block;
+}
+input[type='file'] {
+	margin-bottom: 10px;   
+ }
+input[type="submit"]{
+	margin-top: 10px;
+	background-color: green;
+	color: white;
+}
+
+.disconnect{
+	background-color: red;
+	padding: 10px
+}
+.disconnect-link{
+	background-color: red;
+	text-decoration: none;
+	color: white;
+}
+.aviso{
+	background-color: khaki;
+	color: rgb(141, 136, 88);
+	padding: 10px;
+}
+table{
+	background-color: rgb(30, 25, 37);
+	color: white;
+	max-width: 600px !important;
+}
+tr{
+	border-bottom: rgb(204, 204, 204) 0.01px solid;
+}
+.imagen{
+	width: 100%;
+	max-width: 80px;
+}
+img{
+	width: 100%;
+	max-width: 80px;
+}
+th{
+	width: 33%;
+}
+.hide{
+	display:none;
+}
