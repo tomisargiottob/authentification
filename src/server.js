@@ -52,12 +52,10 @@ app.engine(
 app.set('views', './src/views');
 app.set('view engine', 'hbs');
 
-console.log(passport);
 app.get('/', (req, res) => {
   if (req.isAuthenticated()) {
     res.redirect('/home');
   } else {
-    console.log('aqui');
     res.redirect('/login');
   }
 });
