@@ -12,7 +12,7 @@ const {
 const router = express.Router();
 
 router.get('/failLogin', getFailLogin);
-router.post('/login', passport.authenticate('local', { failureRedirect: '/failLogin' }), postLogin);
+router.post('/login', passport.authenticate('login', { failureRedirect: '/failLogin' }), postLogin);
 router.get('/login', getLogin);
 
 router.get('/signup', getSignup);
