@@ -91,6 +91,7 @@
 			.then(data => {
 				removeElementsByClass('product-data');	
 				refreshTable(data)
+				console.log(data);
 				if (data.length){
 					data.forEach((product)=>{
 						tableRow(product, "con-productos-space")

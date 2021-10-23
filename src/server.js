@@ -11,10 +11,17 @@ const db = require('./models/db');
 const { productosRouter } = require('./controller/productos');
 const { productosTestRouter } = require('./controller/productos-test');
 const { messagesRouter } = require('./controller/mensajes');
+const minimist = require('minimist');
+const { fork } = require('child_process');
 
 const app = express();
-const PORT = config.app.port || 8080;
-
+const arguments = minimist(process.argv.slice(2),{
+  default: {
+    n: 1000000000,
+    p: 8080
+  }
+});
+console.log(arguments);
 app.use(cookieParser(config.secret));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -59,6 +66,23 @@ app.get('/', (req, res) => {
     res.redirect('/login');
   }
 });
+app.get('/info', (req, res) => {
+  res.render('info', {
+    argumentos: JSON.stringify(arguments),
+    plataforma: process.platform,
+    path: process.cwd(),
+    id: process.pid,
+    memory: process.memoryUsage().rss,
+    version: process.version,
+  });
+});
+const computo = fork('./src/utils/calculo.js')
+app.get('/random', (req, res) => {
+  computo.on('message', (resultado) => {
+    res.status(200).json(resultado);
+  })
+  computo.send(arguments['n'])
+});
 
 app.get('/logout', (req, res) => {
   res.clearCookie('connect.sid').redirect('/login');
@@ -81,8 +105,8 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
   failureRedirect: '/failLogin',
 }));
 
-app.listen(PORT, () => {
-  console.log(`Server up and listening on http://localhost:${PORT}`);
+app.listen(arguments['p'], () => {
+  console.log(`Server up and listening on http://localhost:${arguments['p']}`);
 });
 
 app.on('error', (err) => {

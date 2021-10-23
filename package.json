@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon src/server.js"
+    "debug": "nodemon src/server.js",
+    "start": "nodemon src/server.js",
+    "start:n": "nodemon src/server.js -n 10000",
+    "start:p": "nodemon src/server.js -n 1000000000 -p 3000"
+
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,7 @@
     "express-session": "^1.17.2",
     "faker": "^5.5.3",
     "knex": "^0.95.11",
+    "minimist": "^1.2.5",
     "mongoose": "^6.0.8",
     "mysql2": "^2.3.0",
     "node-emoji": "^1.11.0",
