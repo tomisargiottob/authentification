@@ -13,5 +13,4 @@ como no lee el archivo de configuracion en los nodos, se ejecuta con este codigo
 
 Para iniciar con pm2
 	- modo fork 
-	pm2 start ecosystem.config.js
-	
+	pm2 start ecosystemfork.config.js  

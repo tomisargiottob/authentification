@@ -192,7 +192,7 @@ if (args.m === 'cluster') {
   const computo = fork('./src/utils/calculo.js');
   app.get('/random', (req, res) => {
     computo.on('message', (resultado) => {
-      res.status(200).json(resultado);
+      res.status(200).json(args.p, resultado);
     });
     computo.send(args.n);
   });
