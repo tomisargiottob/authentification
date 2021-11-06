@@ -16,8 +16,6 @@ class Product {
           table.integer('price').notNullable();
           table.string('thumbnail');
         });
-      } else {
-        console.log('table products already exists');
       }
     } catch (err) {
       console.log(err);
