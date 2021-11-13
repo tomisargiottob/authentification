@@ -8,6 +8,9 @@ const cookieParser = require('cookie-parser');
 const os = require('os');
 const cluster = require('cluster');
 const { fork } = require('child_process');
+const compression = require('compression');
+const logger = require('./utils/logger');
+const aleatorio = require('./utils/calculo');
 const { passport } = require('./utils/passport.util');
 const { router } = require('./routers/auth.route');
 // eslint-disable-next-line no-unused-vars
@@ -26,19 +29,23 @@ const args = minimist(process.argv.slice(2), {
 });
 if (args.m === 'cluster') {
   if (cluster.isMaster) {
-    console.log(`Master PID ${process.pid} is running`);
+    logger.info(`Master PID ${process.pid} is running`);
     for (let i = 0; i < nCpus; i += 1) {
       cluster.fork();
     }
     cluster.on('exit', (worker) => {
-      console.log(`Worker PID ${worker.process.pid} has exited`);
+      logger.info(`Worker PID ${worker.process.pid} has exited`);
     });
   } else {
-    console.log(`Worker PID ${process.pid} is running`);
+    logger.info(`Worker PID ${process.pid} is running`);
     const app = express();
     app.use(cookieParser(config.secret));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use((req, res, next) => {
+      logger.info({ route: req.url, method: req.method }, 'Request incomming');
+      next();
+    });
     app.use('/products', productosRouter);
     app.use('/products-test', productosTestRouter);
     app.use('/messages', messagesRouter);
@@ -80,7 +87,7 @@ if (args.m === 'cluster') {
         res.redirect('/login');
       }
     });
-    app.get('/info', (req, res) => {
+    app.get('/info', compression(), (req, res) => {
       res.render('info', {
         argumentos: JSON.stringify(args),
         plataforma: process.platform,
@@ -121,27 +128,34 @@ if (args.m === 'cluster') {
       successRedirect: '/home',
       failureRedirect: '/failLogin',
     }));
-
+    
+    app.all('*', (req, res) => {
+      logger.warn({ route: req.url, method: req.method }, 'Route not defined');
+      res.send('Route not defined');
+    });
     app.listen(args.p, () => {
-      console.log(`Server up and listening on http://localhost:${args.p}`);
+      logger.info(`Server up and listening on http://localhost:${args.p}`);
     });
 
     app.on('error', (err) => {
-      console.log(err);
+      logger.error(err);
     });
   }
 } else {
-  console.log(`Mode fork process ${process.pid} is running`);
+  logger.info(`Mode fork process ${process.pid} is running`);
   const app = express();
   app.use(cookieParser(config.secret));
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  app.use((req, res, next) => {
+    logger.info({ route: req.url, method: req.method }, 'Request incomming');
+    next();
+  });
   app.use('/products', productosRouter);
   app.use('/products-test', productosTestRouter);
   app.use('/messages', messagesRouter);
   app.use('', router);
   app.use(cors());
-
   app.use(express.static('public'));
   app.use(session({
     secret: config.secret,
@@ -177,7 +191,19 @@ if (args.m === 'cluster') {
       res.redirect('/login');
     }
   });
-  app.get('/info', (req, res) => {
+  app.get('/infoConsole', compression(), (req, res) => {
+    console.log('Entra una peticion a info con console log')
+    res.render('info', {
+      argumentos: JSON.stringify(args),
+      plataforma: process.platform,
+      path: process.cwd(),
+      id: process.pid,
+      memory: process.memoryUsage().rss,
+      version: process.version,
+      cpus: nCpus,
+    });
+  });
+  app.get('/info', compression(), (req, res) => {
     res.render('info', {
       argumentos: JSON.stringify(args),
       plataforma: process.platform,
@@ -189,12 +215,14 @@ if (args.m === 'cluster') {
     });
   });
 
-  const computo = fork('./src/utils/calculo.js');
-  app.get('/random', (req, res) => {
-    computo.on('message', (resultado) => {
-      res.status(200).json(args.p, resultado);
-    });
-    computo.send(args.n);
+  // const computo = fork('./src/utils/calculo.js');
+  app.get('/random', async (req, res) => {
+    // computo.on('message', (resultado) => {
+    //   res.status(200).json(args.p, resultado);
+    // });
+    // computo.send(args.n);
+    const resultado = await aleatorio(args.n);
+    res.status(200).json(resultado);
   });
 
   app.get('/logout', (req, res) => {
@@ -218,12 +246,16 @@ if (args.m === 'cluster') {
     successRedirect: '/home',
     failureRedirect: '/failLogin',
   }));
+  app.all('*', (req, res) => {
+    logger.warn({ route: req.url, method: req.method }, 'Route not defined');
+    res.send('Route not defined');
+  });
 
   app.listen(args.p, () => {
-    console.log(`Server up and listening on http://localhost:${args.p}`);
+    logger.info(`Server up and listening on http://localhost:${args.p}`);
   });
 
   app.on('error', (err) => {
-    console.log(err);
+    logger.error(err);
   });
 }

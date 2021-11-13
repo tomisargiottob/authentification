@@ -1,5 +1,5 @@
 const db = require('../db/sqlite');
-
+const logger = require('../utils/logger');
 class Product {
   constructor() {
     this.client = db.client;
@@ -18,7 +18,7 @@ class Product {
         });
       }
     } catch (err) {
-      console.log(err);
+      logger.error(err);
     }
   }
 
@@ -27,7 +27,7 @@ class Product {
     try {
       products = await this.client.select().from('products');
     } catch (error) {
-      console.log(error);
+      logger.error(error);
     }
     return products;
   }
@@ -35,9 +35,9 @@ class Product {
   async createProduct(product) {
     try {
       await this.client.insert(product).from('products');
-      console.log('producto insertado');
+      logger.info('producto insertado');
     } catch (error) {
-      console.log(error);
+      logger.error(error);
     }
   }
 }

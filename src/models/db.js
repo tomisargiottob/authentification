@@ -1,5 +1,6 @@
 const config = require('config');
 const mongoose = require('mongoose');
+const logger = require('../utils/logger');
 
 mongoose.connect(
   config.mongodb.uri, {
@@ -8,9 +9,9 @@ mongoose.connect(
   },
   (err) => {
     if (err) {
-      console.log(err);
+      logger.error(err);
     } else {
-      console.log('connected to db');
+      logger.info('connected to db');
     }
   },
 );

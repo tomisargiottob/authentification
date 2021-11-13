@@ -16,3 +16,5 @@ process.on('message', (total) => {
   console.log(resultado);
   process.send(resultado);
 });
+
+module.exports = aleatorio;
