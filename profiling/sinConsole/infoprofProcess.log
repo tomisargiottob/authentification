@@ -1,0 +1,720 @@
+Statistical profiling result from infoProf.log, (12031 ticks, 35 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  10081   83.8%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+    187    1.6%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      9    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      2    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     68    0.6%    3.9%  LazyCompile: *resolve node:path:1091:10
+     65    0.5%    3.7%  LazyCompile: *wrap /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+     63    0.5%    3.6%  LazyCompile: *parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     46    0.4%    2.6%  LazyCompile: *SourceNode_walk /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:221:53
+     32    0.3%    1.8%  LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     23    0.2%    1.3%  LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:176:16
+     20    0.2%    1.1%  LazyCompile: *anonymous /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+     19    0.2%    1.1%  LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     18    0.1%    1.0%  LazyCompile: *normalizeString node:path:66:25
+     16    0.1%    0.9%  LazyCompile: *generateList /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+     12    0.1%    0.7%  LazyCompile: *SourceNode_add /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:172:51
+     11    0.1%    0.6%  LazyCompile: *join node:path:1166:7
+      9    0.1%    0.5%  RegExp: ^(?:[^\x00]*?(?=(\{\{)))
+      8    0.1%    0.5%  LazyCompile: *extend /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      8    0.1%    0.5%  LazyCompile: *castChunk /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+      8    0.1%    0.5%  LazyCompile: *anonymous /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:549:49
+      8    0.1%    0.5%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      8    0.1%    0.5%  LazyCompile: *Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+      7    0.1%    0.4%  LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      7    0.1%    0.4%  LazyCompile: *preparePath /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:63:21
+      7    0.1%    0.4%  LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:174:29
+      6    0.0%    0.3%  LazyCompile: *readFile node:fs:370:18
+      6    0.0%    0.3%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      6    0.0%    0.3%  LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:123:11
+      5    0.0%    0.3%  RegExp: ^(?:\{\{(~)?\s*else\s*(~)?\}\})
+      5    0.0%    0.3%  RegExp: ^(?:\{\{(~)?!--)
+      5    0.0%    0.3%  RegExp: (?:\r\n?|\n).*
+      5    0.0%    0.3%  LazyCompile: *renderView /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      5    0.0%    0.3%  LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      4    0.0%    0.2%  RegExp: (^|\r?\n)\s*?$
+      4    0.0%    0.2%  LazyCompile: *wrapper /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/wrappy/wrappy.js:19:19
+      4    0.0%    0.2%  LazyCompile: *setupParams /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      4    0.0%    0.2%  LazyCompile: *realpathSync node:fs:2398:22
+      4    0.0%    0.2%  LazyCompile: *parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:271:16
+      4    0.0%    0.2%  LazyCompile: *invokeAmbiguous /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      3    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\s*else\b)
+      3    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\^\s*(~)?\}\})
+      3    0.0%    0.2%  RegExp: ^(?:\{\{(~)?![\s\S]*?\}\})
+      3    0.0%    0.2%  RegExp: ^(?:=)
+      3    0.0%    0.2%  RegExp: ^(?:(~)?\}\})
+      3    0.0%    0.2%  LazyCompile: *yy.locInfo /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:42:25
+      3    0.0%    0.2%  LazyCompile: *validateString node:internal/validators:117:24
+      3    0.0%    0.2%  LazyCompile: *update node:internal/crypto/hash:95:40
+      3    0.0%    0.2%  LazyCompile: *setHeader node:_http_outgoing:571:57
+      3    0.0%    0.2%  LazyCompile: *resolvePath /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      3    0.0%    0.2%  LazyCompile: *readFileAfterStat node:fs:323:27
+      3    0.0%    0.2%  LazyCompile: *readFileAfterOpen node:fs:307:27
+      3    0.0%    0.2%  LazyCompile: *parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/vary/index.js:96:16
+      3    0.0%    0.2%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      3    0.0%    0.2%  LazyCompile: *formatWithOptionsInternal node:internal/util/inspect:1889:35
+      3    0.0%    0.2%  LazyCompile: *emit node:events:343:44
+      3    0.0%    0.2%  LazyCompile: *dirname node:path:1275:10
+      3    0.0%    0.2%  LazyCompile: *classifySexpr /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      3    0.0%    0.2%  LazyCompile: *_storeHeader node:_http_outgoing:373:22
+      3    0.0%    0.2%  LazyCompile: *_getFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      3    0.0%    0.2%  LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:130:39
+      2    0.0%    0.1%  RegExp: ^(?:\{\{\{\{)
+      2    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\*?)
+      2    0.0%    0.1%  RegExp: ^(?:\()
+      2    0.0%    0.1%  RegExp: ^(?:([^\s!"#%-,\.\/;->@\[-\^`\{-~]+(?=([=~}\s\/.)|]))))
+      2    0.0%    0.1%  RegExp: \r?\n\s*?$
+      2    0.0%    0.1%  RegExp: \=+$
+      2    0.0%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      2    0.0%    0.1%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      2    0.0%    0.1%  LazyCompile: *template /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/runtime.js:52:18
+      2    0.0%    0.1%  LazyCompile: *slowCases node:internal/util:146:19
+      2    0.0%    0.1%  LazyCompile: *replaceStack /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      2    0.0%    0.1%  LazyCompile: *relative node:path:1190:11
+      2    0.0%    0.1%  LazyCompile: *readFileAfterClose node:internal/fs/read_file_context:46:28
+      2    0.0%    0.1%  LazyCompile: *push /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:79:22
+      2    0.0%    0.1%  LazyCompile: *opcode /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:347:26
+      2    0.0%    0.1%  LazyCompile: *normalize node:path:1127:12
+      2    0.0%    0.1%  LazyCompile: *go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+      2    0.0%    0.1%  LazyCompile: *fromStringFast node:buffer:411:24
+      2    0.0%    0.1%  LazyCompile: *ambiguousSexpr /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      2    0.0%    0.1%  LazyCompile: *_write node:internal/streams/writable:283:16
+      2    0.0%    0.1%  LazyCompile: *_addListener node:events:422:22
+      2    0.0%    0.1%  LazyCompile: *WhitespaceControl.Program /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      2    0.0%    0.1%  LazyCompile: *SourceNode_prepend /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:197:59
+      2    0.0%    0.1%  LazyCompile: *PathExpression /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      2    0.0%    0.1%  LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2    0.0%    0.1%  LazyCompile: *Hash node:internal/crypto/hash:58:14
+      2    0.0%    0.1%  LazyCompile: *Glob._processReaddir2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:373:44
+      2    0.0%    0.1%  LazyCompile: *<anonymous> node:internal/fs/utils:685:40
+      1    0.0%    0.1%  RegExp: ^text\/|^application\/(javascript|json)
+      1    0.0%    0.1%  RegExp: ^\s*?(\r?\n|$)
+      1    0.0%    0.1%  RegExp: ^\/products\/?(?=\/|$)
+      1    0.0%    0.1%  RegExp: ^\/info\/?$
+      1    0.0%    0.1%  RegExp: ^\/infoConsole\/?$
+      1    0.0%    0.1%  RegExp: ^[\u0009\u0020-\u007e\u0080-\u00ff]+$
+      1    0.0%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.1%  RegExp: ^(?:true(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:null(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:\}\}\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\}(~)?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\|)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\{)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?>)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?#>)
+      1    0.0%    0.1%  RegExp: ^(?:\s+)
+      1    0.0%    0.1%  RegExp: ^(?:\.\.)
+      1    0.0%    0.1%  RegExp: ^(?:\))
+      1    0.0%    0.1%  RegExp: ^(?:-?[0-9]+(?:\.[0-9]+)?(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: [&<>"'`=]
+      1    0.0%    0.1%  RegExp: (?:^|\/)\.?\.$
+      1    0.0%    0.1%  LazyCompile: *toString node:buffer:781:46
+      1    0.0%    0.1%  LazyCompile: *setupHelperArgs /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1    0.0%    0.1%  LazyCompile: *restore /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:620:17
+      1    0.0%    0.1%  LazyCompile: *readFileSync node:fs:447:22
+      1    0.0%    0.1%  LazyCompile: *quotedString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      1    0.0%    0.1%  LazyCompile: *pushAsyncContext node:internal/async_hooks:527:26
+      1    0.0%    0.1%  LazyCompile: *processImmediate node:internal/timers:421:28
+      1    0.0%    0.1%  LazyCompile: *popStack /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:960:30
+      1    0.0%    0.1%  LazyCompile: *normalizeEncoding node:internal/util:141:27
+      1    0.0%    0.1%  LazyCompile: *nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    0.0%    0.1%  LazyCompile: *lookupProperty /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/runtime.js:118:44
+      1    0.0%    0.1%  LazyCompile: *internalNameLookup /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:66:50
+      1    0.0%    0.1%  LazyCompile: *hasHooks node:internal/async_hooks:458:18
+      1    0.0%    0.1%  LazyCompile: *getEncodingOps node:buffer:677:24
+      1    0.0%    0.1%  LazyCompile: *createUnsafeBuffer node:internal/buffer:1059:28
+      1    0.0%    0.1%  LazyCompile: *createNewLookupObject /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/internal/create-new-lookup-object.js:15:31
+      1    0.0%    0.1%  LazyCompile: *compileFunction node:vm:308:25
+      1    0.0%    0.1%  LazyCompile: *basename node:path:1306:11
+      1    0.0%    0.1%  LazyCompile: *appendToBuffer /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      1    0.0%    0.1%  LazyCompile: *appendEscaped /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1    0.0%    0.1%  LazyCompile: *alignPool node:buffer:157:19
+      1    0.0%    0.1%  LazyCompile: *accept /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js:57:26
+      1    0.0%    0.1%  LazyCompile: *SubExpression /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1    0.0%    0.1%  LazyCompile: *SourceLocation /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:32:24
+      1    0.0%    0.1%  LazyCompile: *RES /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/inflight/inflight.js:18:28
+      1    0.0%    0.1%  LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    0.0%    0.1%  LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+      1    0.0%    0.1%  LazyCompile: *ContentStatement /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:228:46
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:274:31
+
+ [C++]:
+   ticks  total  nonlib   name
+    492    4.1%   28.1%  __pthread_cond_signal
+    109    0.9%    6.2%  __GI___pthread_mutex_unlock
+     81    0.7%    4.6%  __write
+     47    0.4%    2.7%  _IO_fwrite
+     39    0.3%    2.2%  __libc_malloc
+     36    0.3%    2.1%  syscall
+     25    0.2%    1.4%  __pthread_cond_wait
+     23    0.2%    1.3%  epoll_pwait
+     23    0.2%    1.3%  __libc_read
+     20    0.2%    1.1%  __libc_free
+     19    0.2%    1.1%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     12    0.1%    0.7%  operator new(unsigned long)
+     11    0.1%    0.6%  _IO_file_xsputn
+      9    0.1%    0.5%  __lll_lock_wait
+      8    0.1%    0.5%  __GI___pthread_mutex_lock
+      7    0.1%    0.4%  std::ostream::sentry::sentry(std::ostream&)
+      4    0.0%    0.2%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      4    0.0%    0.2%  __mprotect
+      4    0.0%    0.2%  __libc_open
+      4    0.0%    0.2%  _IO_default_xsputn
+      3    0.0%    0.2%  shutdown
+      3    0.0%    0.2%  operator new[](unsigned long)
+      3    0.0%    0.2%  operator delete(void*)
+      3    0.0%    0.2%  __mmap
+      3    0.0%    0.2%  __errno_location
+      2    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      2    0.0%    0.1%  accept4
+      2    0.0%    0.1%  __libc_write
+      2    0.0%    0.1%  __fmod_finite
+      2    0.0%    0.1%  __clock_gettime
+      2    0.0%    0.1%  _IO_fflush
+      1    0.0%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.1%  std::ostream::flush()
+      1    0.0%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      1    0.0%    0.1%  epoll_ctl
+      1    0.0%    0.1%  char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
+      1    0.0%    0.1%  brk
+      1    0.0%    0.1%  __pthread_condattr_init
+      1    0.0%    0.1%  __GI___pthread_rwlock_wrlock
+      1    0.0%    0.1%  __GI___pthread_rwlock_unlock
+      1    0.0%    0.1%  __GI___pthread_rwlock_rdlock
+      1    0.0%    0.1%  __GI___pthread_once
+      1    0.0%    0.1%  _IO_file_write
+
+ [Summary]:
+   ticks  total  nonlib   name
+    700    5.8%   40.0%  JavaScript
+   1017    8.5%   58.0%  C++
+    321    2.7%   18.3%  GC
+  10279   85.4%          Shared libraries
+     35    0.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    476   54.7%    4.0%  __pthread_cond_signal
+    103   11.8%    0.9%  __GI___pthread_mutex_unlock
+     68    7.8%    0.6%  __write
+     44    5.1%    0.4%  _IO_fwrite
+     36    4.1%    0.3%  syscall
+     35    4.0%    0.3%  __libc_malloc
+     19    2.2%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     11    1.3%    0.1%  __libc_free
+     11    1.3%    0.1%  _IO_file_xsputn
+      8    0.9%    0.1%  operator new(unsigned long)
+      8    0.9%    0.1%  __GI___pthread_mutex_lock
+      7    0.8%    0.1%  std::ostream::sentry::sentry(std::ostream&)
+      7    0.8%    0.1%  __lll_lock_wait
+      4    0.5%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      4    0.5%    0.0%  __libc_open
+      3    0.3%    0.0%  operator new[](unsigned long)
+      3    0.3%    0.0%  operator delete(void*)
+      2    0.2%    0.0%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      2    0.2%    0.0%  __mprotect
+      2    0.2%    0.0%  __libc_write
+      2    0.2%    0.0%  __fmod_finite
+      2    0.2%    0.0%  _IO_fflush
+      2    0.2%    0.0%  _IO_default_xsputn
+      1    0.1%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.1%    0.0%  std::ostream::flush()
+      1    0.1%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.1%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      1    0.1%    0.0%  char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
+      1    0.1%    0.0%  __clock_gettime
+      1    0.1%    0.0%  __GI___pthread_rwlock_wrlock
+      1    0.1%    0.0%  __GI___pthread_rwlock_unlock
+      1    0.1%    0.0%  __GI___pthread_rwlock_rdlock
+      1    0.1%    0.0%  __GI___pthread_once
+      1    0.1%    0.0%  _IO_file_write
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  10081   83.8%  /home/develop/.nvm/versions/node/v16.6.0/bin/node
+   5619   55.7%    /home/develop/.nvm/versions/node/v16.6.0/bin/node
+    879   15.6%      LazyCompile: ~compileFunction node:vm:308:25
+    814   92.6%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+    814  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+    814  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     65    7.4%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+     65  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     65  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+    363    6.5%      LazyCompile: ~close node:internal/fs/read_file_context:111:8
+    363  100.0%        LazyCompile: ~readFileAfterRead node:internal/fs/read_file_context:25:27
+    309    5.5%      LazyCompile: ~memoryUsage node:internal/process/per_thread:165:23
+    309  100.0%        LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/src/server.js:206:35
+    309  100.0%          LazyCompile: ~handle /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/layer.js:86:49
+    309  100.0%            LazyCompile: ~next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/route.js:114:16
+    233    4.1%      /home/develop/.nvm/versions/node/v16.6.0/bin/node
+     21    9.0%        LazyCompile: *Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+     11   52.4%          LazyCompile: *Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+     11  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:623:43
+     10   47.6%          LazyCompile: ~Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+     10  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:623:43
+     15    6.4%        LazyCompile: ~escapeExpression /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/utils.js:77:26
+     15  100.0%          Function: ~<anonymous> :1:20
+     15  100.0%            LazyCompile: ~main /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/runtime.js:207:18
+     15    6.4%        /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      7   46.7%          LazyCompile: *Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+      5   71.4%            LazyCompile: *Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+      2   28.6%            LazyCompile: ~Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+      3   20.0%          LazyCompile: ~Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+      3  100.0%            LazyCompile: ~Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+      2   13.3%          LazyCompile: ~set /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/session/memory.js:119:41
+      2  100.0%            LazyCompile: ~save /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/session/session.js:71:54
+      2   13.3%          LazyCompile: ~Glob._processReaddir2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:373:44
+      2  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:368:43
+      1    6.7%          LazyCompile: *Glob._processReaddir2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:373:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:368:43
+     11    4.7%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+     10   90.9%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:321:26
+      9   90.0%            LazyCompile: ~trySelf node:internal/modules/cjs/loader:441:17
+      1   10.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    9.1%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+     11    4.7%        LazyCompile: ~asString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/date-format/lib/index.js:33:18
+     11  100.0%          LazyCompile: ~timestampLevelAndCategory /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/log4js/lib/layouts.js:40:35
+     11  100.0%            LazyCompile: ~colouredLayout /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/log4js/lib/layouts.js:69:24
+      8    3.4%        LazyCompile: ~header /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:754:29
+      5   62.5%          LazyCompile: ~contentType /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:594:32
+      5  100.0%            LazyCompile: ~send /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:107:25
+      3   37.5%          LazyCompile: ~send /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:107:25
+      2   66.7%            LazyCompile: ~done /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:1006:27
+      1   33.3%            LazyCompile: *renderView /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      8    3.4%        LazyCompile: ~expressInit /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/middleware/init.js:29:30
+      7   87.5%          LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:176:16
+      7  100.0%            LazyCompile: ~query /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/middleware/query.js:39:24
+      1   12.5%          LazyCompile: ~handle /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:288:23
+      7    3.0%        LazyCompile: ~FastBuffer node:internal/buffer:958:14
+      7  100.0%          LazyCompile: ~createUnsafeBuffer node:internal/buffer:1059:28
+      3   42.9%            LazyCompile: ~createPool node:buffer:149:20
+      3   42.9%            LazyCompile: ~allocUnsafeSlow node:buffer:381:50
+      1   14.3%            LazyCompile: ~allocate node:buffer:396:18
+      7    3.0%        LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:181:26
+      7  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      7  100.0%            LazyCompile: ~make /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:142:15
+      6    2.6%        LazyCompile: ~set /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/session/memory.js:119:41
+      6  100.0%          LazyCompile: ~save /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/session/session.js:71:54
+      6  100.0%            LazyCompile: ~save /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:403:20
+      6    2.6%        LazyCompile: ~pipe /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/send/index.js:510:43
+      6  100.0%          LazyCompile: ~serveStatic /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/serve-static/index.js:72:31
+      6  100.0%            LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:176:16
+      6    2.6%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      6  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      6  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      6    2.6%        LazyCompile: *setHeader node:_http_outgoing:571:57
+      3   50.0%          LazyCompile: ~setcookie /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:655:19
+      3  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:220:28
+      3   50.0%          LazyCompile: ~header /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:754:29
+      2   66.7%            LazyCompile: ~contentType /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:594:32
+      1   33.3%            LazyCompile: ~send /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:107:25
+      6    2.6%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      4   66.7%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      3   75.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1   25.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      2   33.3%          LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      5    2.1%        LazyCompile: ~checkInvalidHeaderChar node:_http_common:232:32
+      5  100.0%          LazyCompile: ~<anonymous> node:_http_outgoing:561:45
+      5  100.0%            LazyCompile: ~setHeader node:_http_outgoing:571:57
+      5    2.1%        LazyCompile: *appendEscaped /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      5  100.0%          LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      5  100.0%            LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      4    1.7%        LazyCompile: ~normalize node:path:1127:12
+      4  100.0%          LazyCompile: ~join node:path:1166:7
+      3   75.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+      1   25.0%            LazyCompile: ~makeAbs /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/common.js:197:18
+      4    1.7%        LazyCompile: ~JSONCookies /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-parser/index.js:103:22
+      4  100.0%          LazyCompile: ~cookieParser /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-parser/index.js:44:32
+      4  100.0%            LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:176:16
+      4    1.7%        LazyCompile: *parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:271:16
+      4  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      4  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:181:26
+      3    1.3%        LazyCompile: ~next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      3  100.0%          LazyCompile: ~lex /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      3  100.0%            LazyCompile: ~lex /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      3    1.3%        LazyCompile: ~mergeSource /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      3  100.0%          LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   66.7%            LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1   33.3%            LazyCompile: ~compileInput /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      3    1.3%        LazyCompile: *quotedString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      2   66.7%          LazyCompile: ~quotedString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:998:38
+      2  100.0%            LazyCompile: ~setupParams /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      1   33.3%          LazyCompile: ~pushSource /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            LazyCompile: ~appendEscaped /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      3    1.3%        LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3  100.0%          LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      3  100.0%            LazyCompile: ~require node:internal/modules/cjs/helpers:93:31
+    179    3.2%      LazyCompile: ~writevGeneric node:internal/stream_base_commons:122:23
+    179  100.0%        LazyCompile: ~Socket._writeGeneric node:net:754:42
+    179  100.0%          LazyCompile: ~Socket._writev node:net:786:36
+    179  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+    157    2.8%      LazyCompile: ~read node:internal/fs/read_file_context:85:7
+    157  100.0%        LazyCompile: ~readFileAfterStat node:fs:323:27
+    129    2.3%      LazyCompile: *readFile node:fs:370:18
+     87   67.4%        LazyCompile: *go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+     87  100.0%          LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+     55   63.2%            LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+     21   24.1%            LazyCompile: *_getFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      6    6.9%            LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+      5    5.7%            LazyCompile: *<anonymous> node:internal/util:322:24
+     42   32.6%        LazyCompile: ~go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+     42  100.0%          LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+     39   92.9%            LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      3    7.1%            LazyCompile: *<anonymous> node:internal/util:322:24
+     87    1.5%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     74   85.1%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     10   13.5%          Function: ~<anonymous> node:crypto:1:1
+     10  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      7    9.5%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:421:29
+      7  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      7    9.5%          Function: ~<anonymous> node:https:1:1
+      7  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5    6.8%          Function: ~<anonymous> node:internal/child_process:1:1
+      5  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    5.4%          Function: ~<anonymous> node:tls:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    5.4%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    4.1%          Function: ~<anonymous> node:_http_server:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:tty:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:internal/tls/secure-context:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.7%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:child_process:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.7%          Function: ~<anonymous> node:_tls_wrap:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1  100.0%            LazyCompile: ~get node:crypto:287:8
+      1    1.4%          LazyCompile: ~lazyLoadStreams node:fs:2793:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:2934:17
+      1    1.4%          LazyCompile: ~get node:dns:334:8
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1    1.4%          LazyCompile: ~get BlockList node:net:1760:16
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1    1.4%          Function: ~<anonymous> node:worker_threads:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/worker:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.4%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     13   14.9%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+     13  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:36:26
+     13  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+     85    1.5%      LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     44   51.8%        LazyCompile: ~compileInput /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     44  100.0%          LazyCompile: ~ret /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     44  100.0%            LazyCompile: ~_renderTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+     41   48.2%        LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     41  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+     84    1.5%      LazyCompile: ~readFileAfterOpen node:fs:307:27
+     75    1.3%      LazyCompile: ~readFile node:fs:370:18
+     75  100.0%        LazyCompile: ~go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+     75  100.0%          LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+     74   98.7%            LazyCompile: ~<anonymous> node:internal/util:322:24
+      1    1.3%            LazyCompile: *<anonymous> node:internal/util:322:24
+     73    1.3%      LazyCompile: ~Hmac node:internal/crypto/hash:127:14
+     73  100.0%        LazyCompile: ~createHmac node:crypto:161:20
+     73  100.0%          LazyCompile: ~exports.sign /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-signature/index.js:16:24
+     46   63.0%            LazyCompile: ~exports.unsign /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-signature/index.js:36:26
+     27   37.0%            LazyCompile: ~setcookie /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:655:19
+     66    1.2%      LazyCompile: *SourceNode_walk /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:221:53
+     62   93.9%        LazyCompile: *SourceNode_walk /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:221:53
+     57   91.9%          LazyCompile: *SourceNode_walk /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:221:53
+     55   96.5%            LazyCompile: *SourceNode_walk /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:221:53
+      2    3.5%            LazyCompile: ~SourceNode_toString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:318:61
+      5    8.1%          LazyCompile: ~SourceNode_toString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:318:61
+      5  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      4    6.1%        LazyCompile: ~SourceNode_toString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/source-map/lib/source-node.js:318:61
+      4  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      4  100.0%            LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     61    1.1%      LazyCompile: ~stat node:fs:1442:14
+     61  100.0%        LazyCompile: ~sendFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/send/index.js:716:51
+     61  100.0%          LazyCompile: ~pipe /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/send/index.js:510:43
+     61  100.0%            LazyCompile: ~serveStatic /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/serve-static/index.js:72:31
+
+    492    4.1%  __pthread_cond_signal
+    178   36.2%    LazyCompile: *readFile node:fs:370:18
+    139   78.1%      LazyCompile: *go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+    139  100.0%        LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+     92   66.2%          LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+     83   90.2%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+      9    9.8%            LazyCompile: ~render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     32   23.0%          LazyCompile: *_getFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+     32  100.0%            LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     12    8.6%          LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+     12  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      3    2.2%          LazyCompile: *<anonymous> node:internal/util:322:24
+      3  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+     39   21.9%      LazyCompile: ~go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+     39  100.0%        LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+     38   97.4%          LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+     27   71.1%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+     11   28.9%            LazyCompile: ~render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1    2.6%          LazyCompile: *<anonymous> node:internal/util:322:24
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+    144   29.3%    LazyCompile: *readFileAfterOpen node:fs:307:27
+     99   20.1%    LazyCompile: *readFileAfterStat node:fs:323:27
+     38    7.7%    LazyCompile: *read node:internal/fs/read_file_context:85:7
+     38  100.0%      LazyCompile: ~readFileAfterStat node:fs:323:27
+      9    1.8%    LazyCompile: *Glob._readdir /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:523:36
+      9  100.0%      LazyCompile: ~Glob._readdirInGlobStar /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:490:46
+      9  100.0%        LazyCompile: *Glob._readdir /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:523:36
+      9  100.0%          LazyCompile: *Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+      9  100.0%            LazyCompile: *Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+      8    1.6%    /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   12.5%      LazyCompile: ~writeHead node:_http_server:270:19
+      1  100.0%        LazyCompile: ~writeHead /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/on-headers/index.js:28:29
+      1  100.0%          LazyCompile: ~writeHead /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/on-headers/index.js:28:29
+      1  100.0%            LazyCompile: ~_implicitHeader node:_http_server:265:68
+      1   12.5%      LazyCompile: ~lookupOnContext /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%        LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   12.5%      LazyCompile: ~emitBeforeScript node:internal/async_hooks:497:26
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1  100.0%          LazyCompile: ~runNextTicks node:internal/process/task_queues:59:22
+      1  100.0%            LazyCompile: ~processImmediate node:internal/timers:421:28
+      1   12.5%      LazyCompile: ~createHash node:crypto:129:20
+      1  100.0%        LazyCompile: ~sha1 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-signature/index.js:49:14
+      1  100.0%          LazyCompile: ~exports.unsign /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-signature/index.js:36:26
+      1  100.0%            LazyCompile: ~unsigncookie /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:675:22
+      1   12.5%      LazyCompile: ~Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+      1  100.0%        LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:623:43
+      1  100.0%          LazyCompile: ~RES /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/inflight/inflight.js:18:28
+      1  100.0%            LazyCompile: ~f /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/once/once.js:22:20
+      1   12.5%      LazyCompile: ~Glob._emitMatch /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:452:38
+      1  100.0%        LazyCompile: ~Glob._processReaddir2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:373:44
+      1  100.0%          LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:368:43
+      1  100.0%            LazyCompile: ~RES /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/inflight/inflight.js:18:28
+      1   12.5%      LazyCompile: ~Glob /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:118:15
+      1  100.0%        LazyCompile: ~glob /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:63:15
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/util:322:24
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   12.5%      /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1  100.0%        LazyCompile: ~wrapHelpersToPassLookupProperty /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/runtime.js:359:41
+      1  100.0%          LazyCompile: ~ret._setup /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/runtime.js:217:25
+      1  100.0%            LazyCompile: ~ret /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/runtime.js:188:15
+
+    187    1.6%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+    136   72.7%    /home/develop/.nvm/versions/node/v16.6.0/bin/node
+     45   33.1%      /home/develop/.nvm/versions/node/v16.6.0/bin/node
+     11   24.4%        LazyCompile: *quotedString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      9   81.8%          LazyCompile: ~pushSource /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      7   77.8%            LazyCompile: ~appendEscaped /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2   22.2%            LazyCompile: ~append /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1    9.1%          LazyCompile: ~quotedString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:998:38
+      1  100.0%            LazyCompile: ~setupParams /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      1    9.1%          LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:130:39
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      5   11.1%        LazyCompile: *setupHelperArgs /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      5  100.0%          LazyCompile: *invokeAmbiguous /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      5  100.0%            LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      4    8.9%        LazyCompile: *parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      3   75.0%          LazyCompile: ~parseWithoutProcessing /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      3  100.0%            LazyCompile: ~parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1   25.0%          LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      3    6.7%        LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      2   66.7%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   33.3%          LazyCompile: ~renderView /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      3    6.7%        LazyCompile: *<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:130:39
+      3  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      3  100.0%            LazyCompile: ~objectLiteral /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      2    4.4%        LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:321:26
+      2  100.0%          LazyCompile: ~trySelf node:internal/modules/cjs/loader:441:17
+      2  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    4.4%        LazyCompile: *setupParams /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      2  100.0%          LazyCompile: *setupHelperArgs /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      2  100.0%            LazyCompile: *invokeAmbiguous /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      2    4.4%        /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      2  100.0%          LazyCompile: ~set /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/session/memory.js:119:41
+      2  100.0%            LazyCompile: ~save /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/session/session.js:71:54
+      1    2.2%        LazyCompile: ~strEscape node:internal/util/inspect:463:19
+      1  100.0%          LazyCompile: ~formatPrimitive node:internal/util/inspect:1380:25
+      1  100.0%            LazyCompile: ~formatValue node:internal/util/inspect:724:21
+      1    2.2%        LazyCompile: ~session /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:179:26
+      1  100.0%          LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:176:16
+      1  100.0%            LazyCompile: ~error /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/serve-static/index.js:115:39
+      1    2.2%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1    2.2%        LazyCompile: ~push /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      1  100.0%          LazyCompile: ~pushStackLiteral /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:877:46
+      1  100.0%            LazyCompile: ~pushProgram /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:615:36
+      1    2.2%        LazyCompile: ~parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:271:16
+      1  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/minimatch/minimatch.js:181:26
+      1    2.2%        LazyCompile: ~next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1    2.2%        LazyCompile: ~mergeSource /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1  100.0%          LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1    2.2%        LazyCompile: ~finish /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/common.js:116:17
+      1  100.0%          LazyCompile: ~Glob._finish /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:186:35
+      1  100.0%            LazyCompile: ~done /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:172:17
+      1    2.2%        LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+      1  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1    2.2%        LazyCompile: ~checkInvalidHeaderChar node:_http_common:232:32
+      1  100.0%          LazyCompile: ~<anonymous> node:_http_outgoing:561:45
+      1  100.0%            LazyCompile: ~setHeader node:_http_outgoing:571:57
+      1    2.2%        LazyCompile: ~asString /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/date-format/lib/index.js:33:18
+      1  100.0%          LazyCompile: ~timestampLevelAndCategory /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/log4js/lib/layouts.js:40:35
+      1  100.0%            LazyCompile: ~colouredLayout /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/log4js/lib/layouts.js:69:24
+      1    2.2%        LazyCompile: ~<anonymous> node:internal/fs/utils:356:35
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/fs/utils:667:38
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/fs/utils:679:42
+      1    2.2%        LazyCompile: *appendEscaped /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     11    8.1%      LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      9   81.8%        LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      9  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      2   18.2%        LazyCompile: ~compileInput /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%          LazyCompile: ~ret /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%            LazyCompile: ~_renderTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+      7    5.1%      LazyCompile: *resolve node:path:1091:10
+      2   28.6%        LazyCompile: ~lookup /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/view.js:104:40
+      2  100.0%          LazyCompile: ~View /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/view.js:52:14
+      2  100.0%            LazyCompile: ~render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/application.js:531:29
+      1   14.3%        LazyCompile: ~setopts /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/common.js:47:18
+      1  100.0%          LazyCompile: ~Glob /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:118:15
+      1  100.0%            LazyCompile: ~glob /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:63:15
+      1   14.3%        LazyCompile: ~_resolveLayoutPath /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:359:21
+      1  100.0%          LazyCompile: ~renderView /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   14.3%        LazyCompile: *renderView /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%          /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   14.3%        LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      1  100.0%          LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      1   14.3%        LazyCompile: *Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+      1  100.0%          LazyCompile: *Glob._processGlobStar2 /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:629:45
+      1  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:623:43
+      5    3.7%      LazyCompile: ~alphasort /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/common.js:18:20
+      5  100.0%        /home/develop/.nvm/versions/node/v16.6.0/bin/node
+      5  100.0%          LazyCompile: ~finish /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/common.js:116:17
+      5  100.0%            LazyCompile: ~Glob._finish /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:186:35
+      3    2.2%      LazyCompile: ~tryDecode /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie/index.js:192:19
+      3  100.0%        LazyCompile: ~parse /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie/index.js:49:15
+      3  100.0%          LazyCompile: ~cookieParser /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cookie-parser/index.js:44:32
+      3  100.0%            LazyCompile: *next /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/router/index.js:176:16
+      3    2.2%      LazyCompile: ~serialize /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/node_modules/cookie/index.js:101:19
+      3  100.0%        LazyCompile: ~setcookie /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:655:19
+      3  100.0%          LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-session/index.js:220:28
+      3  100.0%            LazyCompile: ~writeHead /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/on-headers/index.js:28:29
+      3    2.2%      LazyCompile: ~inflight /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/inflight/inflight.js:7:19
+      2   66.7%        LazyCompile: *wrapper /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/wrappy/wrappy.js:19:19
+      2  100.0%          LazyCompile: ~Glob._readdir /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:523:36
+      2  100.0%            LazyCompile: *Glob._process /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:296:36
+      1   33.3%        LazyCompile: ~wrapper /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/wrappy/wrappy.js:19:19
+      1  100.0%          LazyCompile: ~Glob._readdir /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:523:36
+      1  100.0%            LazyCompile: ~Glob._processGlobStar /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/glob/glob.js:621:44
+      2    1.5%      LazyCompile: ~makeConnection /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/mongodb/lib/cmap/connect.js:227:24
+      2  100.0%        LazyCompile: ~connect /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/mongodb/lib/cmap/connect.js:15:17
+      2  100.0%          LazyCompile: ~checkServer /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/mongodb/lib/sdam/monitor.js:138:21
+      2  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/mongodb/lib/sdam/monitor.js:222:12
+      2    1.5%      LazyCompile: ~classifySexpr /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      2  100.0%        LazyCompile: ~SubExpression /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      2  100.0%          LazyCompile: ~MustacheStatement /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1   50.0%            LazyCompile: ~accept /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1   50.0%            LazyCompile: *accept /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      2    1.5%      LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%        LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      2  100.0%          LazyCompile: ~require node:internal/modules/cjs/helpers:93:31
+      1   50.0%            Function: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/faker/lib/locales/de_CH/index.js:1:1
+      1   50.0%            Function: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/faker/lib/locales/cz/name/index.js:1:1
+      2    1.5%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      2    1.5%      LazyCompile: *setHeader node:_http_outgoing:571:57
+      1   50.0%        LazyCompile: ~header /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:754:29
+      1  100.0%          LazyCompile: ~send /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: *renderView /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1   50.0%        LazyCompile: ~applyHeaders /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cors/lib/index.js:144:24
+      1  100.0%          LazyCompile: ~applyHeaders /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cors/lib/index.js:144:24
+      1  100.0%            LazyCompile: ~applyHeaders /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/cors/lib/index.js:144:24
+      2    1.5%      LazyCompile: *readFile node:fs:370:18
+      1   50.0%        LazyCompile: ~go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+      1  100.0%          LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+      1  100.0%            LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      1   50.0%        LazyCompile: *go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+      1  100.0%          LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+      1  100.0%            LazyCompile: *_getFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      2    1.5%      LazyCompile: *invokeAmbiguous /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      2  100.0%        LazyCompile: *compile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%          LazyCompile: ~compileInput /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1   50.0%          LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            /home/develop/.nvm/versions/node/v16.6.0/bin/node
+     13    7.0%    LazyCompile: *compileFunction node:vm:308:25
+     13  100.0%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+     13  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     13  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     13  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:997:36
+      3    1.6%    LazyCompile: *readFile node:fs:370:18
+      3  100.0%      LazyCompile: *go$readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:117:26
+      3  100.0%        LazyCompile: ~readFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/graceful-fs/graceful-fs.js:111:21
+      2   66.7%          LazyCompile: *_getFile /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      2  100.0%            LazyCompile: *render /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1   33.3%          LazyCompile: *getTemplate /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      1  100.0%            LazyCompile: ~<anonymous> /home/develop/Documents/coderhouse/backend/proyect/clase13-tarea/node_modules/express-handlebars/lib/express-handlebars.js:139:53
+      2    1.1%    LazyCompile: *realpathSync node:fs:2398:22
+      1   50.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%          LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:400:23
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1   50.0%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%        LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:997:36
+
