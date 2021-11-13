@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon src/server.js",
+    "test": "node src/benchmark.js",
+    "start:0x": "0x src/server.js",
+    "debug": "node --prof src/server.js",
+    "inspect": "node --inspect src/server.js",
     "start": "nodemon src/server.js",
     "start:n": "nodemon src/server.js -n 10000",
     "start:p": "nodemon src/server.js -n 1000000000 -p 3000",
     "start:cluster": "nodemon src/server.js -n 1000000000 -p 3000 -m cluster"
-
-
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autocannon": "^7.5.0",
     "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
     "config": "^3.3.6",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -30,6 +32,7 @@
     "express-session": "^1.17.2",
     "faker": "^5.5.3",
     "knex": "^0.95.11",
+    "log4js": "^6.3.0",
     "minimist": "^1.2.5",
     "mongoose": "^6.0.8",
     "mysql2": "^2.3.0",
