@@ -24,7 +24,7 @@ const nCpus = os.cpus().length;
 const args = minimist(process.argv.slice(2), {
   default: {
     n: 1000000000,
-    p: process.env.p || 8080,
+    p: process.env.p || 3000,
     m: process.env.m || 'fork',
   },
 });
