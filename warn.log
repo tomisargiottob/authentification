@@ -1,0 +1,3 @@
+[2021-11-13T21:25:26.320] [WARN] custom - { route: '/info12', method: 'PATCH' } Route not defined
+[2021-11-13T21:28:11.842] [WARN] custom - { route: '/random', method: 'PATCH' } Route not defined
+[2021-11-25T19:40:03.255] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
