@@ -252,7 +252,7 @@ if (args.m === 'cluster') {
     res.send('Route not defined');
   });
 
-  app.listen(args.p, () => {
+  app.listen(process.env.PORT || 3000, () => {
     logger.info(`Server up and listening on http://localhost:${args.p}`);
   });
 
