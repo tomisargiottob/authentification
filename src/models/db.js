@@ -1,9 +1,9 @@
-const config = require('config');
+// const config = require('config');
 const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 
 mongoose.connect(
-  config.mongodb.uri, {
+  process.env.MONGODBURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },

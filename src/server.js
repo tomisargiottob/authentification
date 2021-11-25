@@ -18,6 +18,7 @@ const db = require('./models/db');
 const { productosRouter } = require('./controller/productos');
 const { productosTestRouter } = require('./controller/productos-test');
 const { messagesRouter } = require('./controller/mensajes');
+require('dotenv').config();
 
 const nCpus = os.cpus().length;
 const args = minimist(process.argv.slice(2), {
@@ -39,7 +40,7 @@ if (args.m === 'cluster') {
   } else {
     logger.info(`Worker PID ${process.pid} is running`);
     const app = express();
-    app.use(cookieParser(config.secret));
+    app.use(cookieParser(process.env.SECRET));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use((req, res, next) => {
@@ -54,7 +55,7 @@ if (args.m === 'cluster') {
 
     app.use(express.static('public'));
     app.use(session({
-      secret: config.secret,
+      secret: process.env.SECRET,
       resave: true,
       saveUninitialized: true,
       rolling: true,
@@ -144,7 +145,7 @@ if (args.m === 'cluster') {
 } else {
   logger.info(`Mode fork process ${process.pid} is running`);
   const app = express();
-  app.use(cookieParser(config.secret));
+  app.use(cookieParser(process.env.SECRET));
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use((req, res, next) => {
@@ -158,7 +159,7 @@ if (args.m === 'cluster') {
   app.use(cors());
   app.use(express.static('public'));
   app.use(session({
-    secret: config.secret,
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
     rolling: true,

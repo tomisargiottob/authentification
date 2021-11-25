@@ -14,8 +14,8 @@ function createHash(password) {
 }
 
 passport.use('facebook', new Strategy({
-  clientID: config.facebook.id,
-  clientSecret: config.facebook.secret2,
+  clientID: process.env.FACEBOOKID,
+  clientSecret: process.env.FACEBOOKSECRET,
   callbackURL: '/auth/facebook/callback',
   profileFields: ['id', 'displayName', 'photos'],
   scope: ['email'],
