@@ -1,5 +1,5 @@
 const express = require('express');
-const config = require('config');
+// const config = require('config');
 const handlebars = require('express-handlebars');
 const session = require('express-session');
 const cors = require('cors');
@@ -13,12 +13,12 @@ const logger = require('./utils/logger');
 const aleatorio = require('./utils/calculo');
 const { passport } = require('./utils/passport.util');
 const { router } = require('./routers/auth.route');
+require('dotenv').config();
 // eslint-disable-next-line no-unused-vars
 const db = require('./models/db');
 const { productosRouter } = require('./controller/productos');
 const { productosTestRouter } = require('./controller/productos-test');
 const { messagesRouter } = require('./controller/mensajes');
-require('dotenv').config();
 
 const nCpus = os.cpus().length;
 const args = minimist(process.argv.slice(2), {
@@ -40,6 +40,19 @@ if (args.m === 'cluster') {
   } else {
     logger.info(`Worker PID ${process.pid} is running`);
     const app = express();
+    app.use(session({
+      secret: process.env.SECRET,
+      resave: true,
+      saveUninitialized: false,
+      rolling: true,
+      cookie: {
+        maxAge: 300000,
+        httpOnly: false,
+        secure: false,
+      },
+    }));
+    app.use(passport.initialize());
+    app.use(passport.session());
     app.use(cookieParser(process.env.SECRET));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
@@ -54,19 +67,6 @@ if (args.m === 'cluster') {
     app.use(cors());
 
     app.use(express.static('public'));
-    app.use(session({
-      secret: process.env.SECRET,
-      resave: true,
-      saveUninitialized: true,
-      rolling: true,
-      cookie: {
-        maxAge: 300000,
-        httpOnly: false,
-        secure: false,
-      },
-    }));
-    app.use(passport.initialize());
-    app.use(passport.session());
 
     app.engine(
       'hbs',
@@ -109,15 +109,15 @@ if (args.m === 'cluster') {
     });
 
     app.get('/logout', (req, res) => {
-      res.clearCookie('connect.sid').redirect('/login');
+      req.logout();
+      res.clearCookie('connect.sid').redirect('/');
     });
 
     app.get('/home', (req, res) => {
       if (req.isAuthenticated()) {
         res.render('main', {
-          nombre: req.user.displayName,
-          foto: req.user.photos[0].value,
-          puerto: args.p,
+          nombre: req.user.displayName || req.user.username,
+          puerto: process.env.PORT,
         });
       } else {
         res.redirect('/login');
@@ -129,7 +129,6 @@ if (args.m === 'cluster') {
       successRedirect: '/home',
       failureRedirect: '/failLogin',
     }));
-    
     app.all('*', (req, res) => {
       logger.warn({ route: req.url, method: req.method }, 'Route not defined');
       res.send('Route not defined');
@@ -145,6 +144,19 @@ if (args.m === 'cluster') {
 } else {
   logger.info(`Mode fork process ${process.pid} is running`);
   const app = express();
+  app.use(session({
+    secret: process.env.SECRET,
+    resave: true,
+    saveUninitialized: false,
+    rolling: true,
+    cookie: {
+      maxAge: 300000,
+      httpOnly: false,
+      secure: false,
+    },
+  }));
+  app.use(passport.initialize());
+  app.use(passport.session());
   app.use(cookieParser(process.env.SECRET));
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
@@ -158,20 +170,6 @@ if (args.m === 'cluster') {
   app.use('', router);
   app.use(cors());
   app.use(express.static('public'));
-  app.use(session({
-    secret: process.env.SECRET,
-    resave: true,
-    saveUninitialized: true,
-    rolling: true,
-    cookie: {
-      maxAge: 300000,
-      httpOnly: false,
-      secure: false,
-    },
-  }));
-  app.use(passport.initialize());
-  app.use(passport.session());
-
   app.engine(
     'hbs',
     handlebars({
@@ -193,7 +191,6 @@ if (args.m === 'cluster') {
     }
   });
   app.get('/infoConsole', compression(), (req, res) => {
-    console.log('Entra una peticion a info con console log')
     res.render('info', {
       argumentos: JSON.stringify(args),
       plataforma: process.platform,
@@ -227,15 +224,15 @@ if (args.m === 'cluster') {
   });
 
   app.get('/logout', (req, res) => {
-    res.clearCookie('connect.sid').redirect('/login');
+    req.logout();
+    res.clearCookie('connect.sid').redirect('/');
   });
 
   app.get('/home', (req, res) => {
     if (req.isAuthenticated()) {
       res.render('main', {
-        nombre: req.user.displayName,
-        foto: req.user.photos[0].value,
-        puerto: args.p,
+        nombre: req.user.displayName || req.user.username,
+        puerto: process.env.PORT,
       });
     } else {
       res.redirect('/login');

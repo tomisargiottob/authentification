@@ -3,7 +3,6 @@ const logger = require('../utils/logger');
 
 function getFailLogin(req, res) {
   logger.info('Error en el login');
-  // console.log(req);
   res.render('login-error', {});
 }
 
@@ -16,16 +15,16 @@ function getFailSignup(req, res) {
   res.render('signup-error', {});
 }
 function postSignup(req, res) {
-  const { user } = req;
-  res.render('main', { nombre: user.userName });
+  // const { user } = req;
+  res.redirect('/home');
 }
 function postLogin(req, res) {
-  const { user } = req;
-  res.render('main', { nombre: user.userName });
+  // const { user } = req;
+  res.redirect('/home');
 }
 // le saco los parentesis a la funcion de req.isauthenticadted por que aca es donde se rompe todo
 function getLogin(req, res) {
-  if (req.isAuthenticated) {
+  if (req.isAuthenticated()) {
     const { user } = req;
     res.render('main', {
       nombre: user.firstName,

@@ -1,7 +1,7 @@
 const passport = require('passport');
-const { Strategy } = require('passport-facebook');
+// const { Strategy } = require('passport-facebook');
 const LocalStrategy = require('passport-local').Strategy;
-const config = require('config');
+// const config = require('config');
 const bcrypt = require('bcrypt');
 const UserModel = require('../models/user.model');
 
@@ -12,14 +12,6 @@ function isValidPasword(user, password) {
 function createHash(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
 }
-
-passport.use('facebook', new Strategy({
-  clientID: process.env.FACEBOOKID,
-  clientSecret: process.env.FACEBOOKSECRET,
-  callbackURL: '/auth/facebook/callback',
-  profileFields: ['id', 'displayName', 'photos'],
-  scope: ['email'],
-}, (accessToken, refreshToken, userProfile, done) => done(null, userProfile)));
 
 passport.use('login', new LocalStrategy(
   (username, password, done) => {
@@ -66,10 +58,12 @@ passport.use('signup', new LocalStrategy({
 }));
 
 passport.serializeUser((user, done) => {
-  done(null, user);
+  // eslint-disable-next-line no-underscore-dangle
+  done(null, user._id);
 });
 passport.deserializeUser((id, done) => {
-  done(null, id);
+  UserModel.findById(id, done);
+  // done(null, id);
 });
 
 module.exports = { passport };
