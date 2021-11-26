@@ -117,7 +117,7 @@ if (args.m === 'cluster') {
       if (req.isAuthenticated()) {
         res.render('main', {
           nombre: req.user.displayName || req.user.username,
-          puerto: process.env.PORT,
+          url: process.env.URL,
         });
       } else {
         res.redirect('/login');
@@ -143,6 +143,7 @@ if (args.m === 'cluster') {
   }
 } else {
   logger.info(`Mode fork process ${process.pid} is running`);
+  console.log(process.env.URL);
   const app = express();
   app.use(session({
     secret: process.env.SECRET,
@@ -232,7 +233,7 @@ if (args.m === 'cluster') {
     if (req.isAuthenticated()) {
       res.render('main', {
         nombre: req.user.displayName || req.user.username,
-        puerto: process.env.PORT,
+        url: process.env.URL,
       });
     } else {
       res.redirect('/login');
