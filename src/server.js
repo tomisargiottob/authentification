@@ -26,8 +26,10 @@ const args = minimist(process.argv.slice(2), {
     n: 1000000000,
     p: process.env.p || 3000,
     m: process.env.m || 'fork',
+    d: process.env.d,
   },
 });
+
 if (args.m === 'cluster') {
   if (cluster.isMaster) {
     logger.info(`Master PID ${process.pid} is running`);

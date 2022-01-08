@@ -1,7 +1,9 @@
 const { Router } = require('express');
-const Product = require('../models/productos');
+const ProductDaoFactory = require('../services/factory');
 
-const products = new Product();
+const products = ProductDaoFactory.getDao();
+ProductDaoFactory.getDao();
+
 
 const productosRouter = new Router();
 
@@ -12,7 +14,7 @@ productosRouter.get('', async (req, res) => {
 
 productosRouter.post('', async (req, res) => {
   const { product } = req.body;
-  await products.createProduct(product);
+  await products.create(product);
   res.status(200).send({ message: 'success' });
 });
 

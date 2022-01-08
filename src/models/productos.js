@@ -1,5 +1,6 @@
 const db = require('../db/sqlite');
 const logger = require('../utils/logger');
+
 class Product {
   constructor() {
     this.client = db.client;
