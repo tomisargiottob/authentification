@@ -7,7 +7,7 @@
     "test": "node src/benchmark.js",
     "start:0x": "0x src/server.js",
     "debug": "node --prof src/server.js",
-    "inspect": "node --inspect src/server.js",
+    "start": "node src/server.js",
     "start:file": "node src/server.js -d file",
     "start:mongo": "node src/server.js -d mongo",
     "start:memory": "node src/server.js -d memory",

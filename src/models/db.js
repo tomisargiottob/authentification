@@ -11,7 +11,7 @@ mongoose.connect(
     if (err) {
       logger.error(err);
     } else {
-      logger.info('connected to db');
+      logger.info('Connected to database');
     }
   },
 );

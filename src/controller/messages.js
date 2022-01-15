@@ -1,29 +1,28 @@
-const { Router } = require('express');
-const message = require('../models/mensajes-model');
 const logger = require('../utils/logger');
+const MessageDaoFactory = require('../services/Messages/factory');
 
-const messagesRouter = new Router();
+const messages = MessageDaoFactory.getDao();
 
-messagesRouter.get('', async (req, res) => {
+async function getMessages(req, res) {
   try {
-    const mensajes = await message.find();
+    const mensajes = await messages.getAll();
     res.status(200).send(mensajes);
   } catch {
     logger.error('Messages could not be fetched');
     res.status(500).send('Messages could not be fetched');
   }
-});
+}
 
-messagesRouter.post('', async (req, res) => {
+async function createMessage(req, res) {
   const { user, text, time } = req.body;
   const userMessage = { user, text, time };
   try {
-    await message.create(userMessage);
+    await messages.create(userMessage);
     res.status(200).send({ message: 'success' });
   } catch {
     logger.error('Could not save message');
     res.status(500).send('Could not save message');
   }
-});
+}
 
-module.exports = { messagesRouter };
+module.exports = { getMessages, createMessage };

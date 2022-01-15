@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const { v4: uuid } = require('uuid');
 const ProductDao = require('./productDAO');
 const returnProducts = require('./productDTO');
@@ -21,25 +22,40 @@ class ProductDaoMemory extends ProductDao {
       }
       return false;
     });
-    return returnProducts(producto);
+    if (producto) {
+      console.log(producto);
+      return returnProducts(producto);
+    }
+    throw new Error('Product not found');
   }
 
   async update(id, data) {
-    let producto = this.products.find((product) => {
+    if (!data.name || !data.price || !data.thumbnail) {
+      throw new Error('Missing information, product should have name, price and thumbnail');
+    }
+    const producto = this.products.findIndex((product) => {
       if (product.id === id) {
         return product;
       }
       return false;
     });
-    producto = data;
-    return returnProducts(producto);
+    if (producto >= 0) {
+      this.products[0] = data;
+      this.products[0].id = id;
+      return returnProducts(this.products[0]);
+    }
+    throw new Error('Product not found');
   }
 
   async delete(id) {
     this.products = this.products.filter((product) => product.id !== id);
+    return true;
   }
 
   async create(data) {
+    if (!data.name || !data.price || !data.thumbnail) {
+      throw new Error('Missing information, product should have name, price and thumbnail');
+    }
     const product = {
       id: uuid(),
       name: data.name,

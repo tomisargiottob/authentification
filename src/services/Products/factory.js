@@ -2,12 +2,16 @@ const minimist = require('minimist');
 const ProductDaoFile = require('./productDaoFile');
 const ProductDaoMongo = require('./productDaoMongo');
 const ProductDaoMemory = require('./productDaoMemory');
-const logger = require('../utils/logger');
+const logger = require('../../utils/logger');
 
 const args = minimist(process.argv.slice(2));
 
 const option = args.d;
-logger.info(`Se ha seleccionado la opcion ${option} de DAO`);
+if (option) {
+  logger.info(`The DAO in ${option} option was selected`);
+} else {
+  logger.info('Default mode DAO in memory selected');
+}
 let dao;
 
 class ProductDaoFactory {

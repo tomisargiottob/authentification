@@ -1,7 +1,7 @@
 class ProductDao {
   constructor(logger) {
     this.log = logger;
-    this.log.info(' se crea una instancia');
+    this.log.info('An instance of ProductDao was created');
   }
 
   getAll() {

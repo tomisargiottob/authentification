@@ -15,15 +15,12 @@ function createHash(password) {
 
 passport.use('login', new LocalStrategy(
   (username, password, done) => {
-    console.log('entra aqui para verificar');
     UserModel.findOne({ username }, (err, user) => {
       if (err) return done(err);
       if (!user) {
-        console.log('no existe el usuario');
         return done(null, false);
       }
       if (!isValidPasword(user, password)) {
-        console.log('invalid password');
         return done(null, false);
       }
       return done(null, user);
@@ -37,7 +34,6 @@ passport.use('signup', new LocalStrategy({
   try {
     const user = await UserModel.findOne({ username });
     if (user) {
-      console.log('usuario existe');
       return done(null, false);
     }
   } catch (err) {
@@ -52,7 +48,6 @@ passport.use('signup', new LocalStrategy({
   };
   UserModel.create(newUser, (err, user) => {
     if (err) return done(err);
-    console.log('usuario creado');
     return done(null, user);
   });
 }));
@@ -63,7 +58,6 @@ passport.serializeUser((user, done) => {
 });
 passport.deserializeUser((id, done) => {
   UserModel.findById(id, done);
-  // done(null, id);
 });
 
 module.exports = { passport };

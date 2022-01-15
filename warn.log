@@ -157,3 +157,27 @@
 [2022-01-08T12:24:58.572] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
 [2022-01-08T12:25:03.921] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
 [2022-01-08T12:25:10.129] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T11:34:31.746] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T11:34:39.149] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T11:34:53.021] [WARN] custom - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T12:18:54.648] [WARN] Logger - { route: '/products/', method: 'PUT' } Route not defined
+[2022-01-15T12:45:57.673] [WARN] Logger - {
+  route: '/products/e61a1a6f-9362-4f17-be0d-1618c2624de4',
+  method: 'POST'
+} Route not defined
+[2022-01-15T13:35:14.599] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T13:35:18.745] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T13:35:20.250] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T13:35:27.814] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:10:38.823] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:52:49.985] [ERROR] Logger - Messages could not be fetched
+[2022-01-15T14:54:51.148] [ERROR] Logger - Messages could not be fetched
+[2022-01-15T14:58:58.229] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:59:05.768] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:59:15.581] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:59:43.151] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:59:48.596] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T14:59:57.921] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T15:00:17.966] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T15:01:25.787] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined
+[2022-01-15T15:29:33.367] [WARN] Logger - { route: '/favicon.ico', method: 'GET' } Route not defined

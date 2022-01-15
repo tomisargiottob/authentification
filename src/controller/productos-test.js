@@ -1,9 +1,6 @@
-const { Router } = require('express');
 const faker = require('faker');
 
-const productosTestRouter = new Router();
-
-productosTestRouter.get('', async (req, res) => {
+async function getTestProducts(req, res) {
   const fakeData = [];
   for (let i = 0; i < 5; i += 1) {
     const fakeProduct = {};
@@ -13,6 +10,6 @@ productosTestRouter.get('', async (req, res) => {
     fakeData.push(fakeProduct);
   }
   res.status(200).send(fakeData);
-});
+}
 
-module.exports = { productosTestRouter };
+module.exports = { getTestProducts };

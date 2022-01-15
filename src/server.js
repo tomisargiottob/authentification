@@ -16,9 +16,9 @@ const { router } = require('./routers/auth.route');
 require('dotenv').config();
 // eslint-disable-next-line no-unused-vars
 const db = require('./models/db');
-const { productosRouter } = require('./controller/productos');
-const { productosTestRouter } = require('./controller/productos-test');
-const { messagesRouter } = require('./controller/mensajes');
+const { productsRouter } = require('./routers/products.route');
+const { testProductsRouter } = require('./routers/testProducts.route');
+const { messagesRouter } = require('./routers/messages.route');
 
 const nCpus = os.cpus().length;
 const args = minimist(process.argv.slice(2), {
@@ -62,8 +62,8 @@ if (args.m === 'cluster') {
       logger.info({ route: req.url, method: req.method }, 'Request incomming');
       next();
     });
-    app.use('/products', productosRouter);
-    app.use('/products-test', productosTestRouter);
+    app.use('/products', productsRouter);
+    app.use('/products-test', testProductsRouter);
     app.use('/messages', messagesRouter);
     app.use('', router);
     app.use(cors());
@@ -145,7 +145,6 @@ if (args.m === 'cluster') {
   }
 } else {
   logger.info(`Mode fork process ${process.pid} is running`);
-  console.log(process.env.URL);
   const app = express();
   app.use(session({
     secret: process.env.SECRET,
@@ -167,8 +166,8 @@ if (args.m === 'cluster') {
     logger.info({ route: req.url, method: req.method }, 'Request incomming');
     next();
   });
-  app.use('/products', productosRouter);
-  app.use('/products-test', productosTestRouter);
+  app.use('/products', productsRouter);
+  app.use('/products-test', testProductsRouter);
   app.use('/messages', messagesRouter);
   app.use('', router);
   app.use(cors());

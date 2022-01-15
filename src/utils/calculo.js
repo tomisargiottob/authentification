@@ -13,7 +13,6 @@ function aleatorio(total) {
 
 process.on('message', (total) => {
   const resultado = aleatorio(Number(total));
-  console.log(resultado);
   process.send(resultado);
 });
 

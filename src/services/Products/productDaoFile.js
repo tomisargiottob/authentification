@@ -18,6 +18,9 @@ class ProductDaoFile extends ProductDao {
   }
 
   async create(product) {
+    if (!product.name || !product.price || !product.thumbnail) {
+      throw new Error('Missing information, product should have name, price and thumbnail');
+    }
     if (!this.products) {
       this.products = [];
     }
@@ -31,8 +34,10 @@ class ProductDaoFile extends ProductDao {
 
   find(id) {
     const productFound = this.products.filter((product) => product.id === id);
-    const products = returnProducts(productFound);
-    return products;
+    if (productFound) {
+      return returnProducts(productFound[0]);
+    }
+    throw new Error('Product not found');
   }
 
   getAll() {
@@ -49,11 +54,29 @@ class ProductDaoFile extends ProductDao {
 
   async delete(id) {
     try {
-      this.products = this.fileInfo.filter((product) => product.id !== id);
-      await fs.promises.writeFile(this.archivo, JSON.stringify(this.fileInfo, null, 2));
+      this.products = fs.readFileSync(this.file, 'utf-8');
+      this.products = JSON.parse(this.products).filter((product) => product.id !== id);
+      fs.writeFileSync(this.file, JSON.stringify(this.products, null, 2));
+      return true;
     } catch (err) {
-      console.log(err);
+      this.logger.error(err);
+      return true;
     }
+  }
+
+  async update(id, data) {
+    if (!data.name || !data.price || !data.thumbnail) {
+      throw new Error('Missing information, product should have name, price and thumbnail');
+    }
+    const productFound = this.products.findIndex((product) => product.id === id);
+    if (productFound >= 0) {
+      // eslint-disable-next-line no-param-reassign
+      data.id = id;
+      this.products[productFound] = data;
+      await fs.promises.writeFile(this.file, JSON.stringify(this.products, null, 2));
+      return this.products[productFound];
+    }
+    throw new Error('Product not found');
   }
 
   static getInstance(logger) {
