@@ -16,11 +16,12 @@ async function getMessages(req, res) {
 async function createMessage(req, res) {
   const { user, text, time } = req.body;
   const userMessage = { user, text, time };
+  console.log(userMessage);
   try {
     await messages.create(userMessage);
     res.status(200).send({ message: 'success' });
-  } catch {
-    logger.error('Could not save message');
+  } catch (err) {
+    logger.error('Could not save message', err.message);
     res.status(500).send('Could not save message');
   }
 }

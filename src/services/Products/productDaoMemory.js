@@ -53,6 +53,11 @@ class ProductDaoMemory extends ProductDao {
   }
 
   async create(data) {
+    if (data.datos) {
+      // eslint-disable-next-line no-param-reassign
+      data = data.datos;
+      console.log(data);
+    }
     if (!data.name || !data.price || !data.thumbnail) {
       throw new Error('Missing information, product should have name, price and thumbnail');
     }

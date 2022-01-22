@@ -1,2 +1,7 @@
 [2022-01-15T14:52:49.985] [ERROR] Logger - Messages could not be fetched
 [2022-01-15T14:54:51.148] [ERROR] Logger - Messages could not be fetched
+[2022-01-15T19:22:47.790] [ERROR] Logger - Could not save message
+[2022-01-15T19:24:03.601] [ERROR] Logger - Could not save message
+[2022-01-15T19:24:33.495] [ERROR] Logger - Could not save message
+[2022-01-15T19:25:05.767] [ERROR] Logger - Could not save message mensaje validation failed: text: Path `text` is required., user: Path `user` is required., time: Path `time` is required.
+[2022-01-15T19:26:24.353] [ERROR] Logger - Could not save message mensaje validation failed: text: Path `text` is required., user: Path `user` is required., time: Path `time` is required.

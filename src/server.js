@@ -9,16 +9,21 @@ const os = require('os');
 const cluster = require('cluster');
 const { fork } = require('child_process');
 const compression = require('compression');
+const { graphqlHTTP } = require('express-graphql');
+const crypto = require('crypto');
 const logger = require('./utils/logger');
 const aleatorio = require('./utils/calculo');
 const { passport } = require('./utils/passport.util');
 const { router } = require('./routers/auth.route');
+
 require('dotenv').config();
 // eslint-disable-next-line no-unused-vars
 const db = require('./models/db');
 const { productsRouter } = require('./routers/products.route');
 const { testProductsRouter } = require('./routers/testProducts.route');
 const { messagesRouter } = require('./routers/messages.route');
+const schema = require('./models/product-schema');
+const ProductDaoFactory = require('./services/Products/factory');
 
 const nCpus = os.cpus().length;
 const args = minimist(process.argv.slice(2), {
@@ -29,6 +34,8 @@ const args = minimist(process.argv.slice(2), {
     d: process.env.d,
   },
 });
+
+const products = ProductDaoFactory.getDao();
 
 if (args.m === 'cluster') {
   if (cluster.isMaster) {
@@ -66,6 +73,17 @@ if (args.m === 'cluster') {
     app.use('/products-test', testProductsRouter);
     app.use('/messages', messagesRouter);
     app.use('', router);
+    app.use('/graphql', graphqlHTTP({
+      schema,
+      rootValue: {
+        getProducts: products.getAll,
+        getProduct: products.find,
+        createProduct: products.create,
+        updateProduct: products.update,
+        deleteProduct: products.delete,
+      },
+      graphiql: true,
+    }));
     app.use(cors());
 
     app.use(express.static('public'));
@@ -170,6 +188,19 @@ if (args.m === 'cluster') {
   app.use('/products-test', testProductsRouter);
   app.use('/messages', messagesRouter);
   app.use('', router);
+
+  app.use('/graphql', graphqlHTTP({
+    schema,
+    rootValue: {
+      getProducts: products.getAll,
+      getProduct: products.find,
+      createProduct: products.create,
+      updateProduct: products.update,
+      deleteProduct: products.delete,
+    },
+    graphiql: true,
+  }));
+
   app.use(cors());
   app.use(express.static('public'));
   app.engine(
