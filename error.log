@@ -5,3 +5,47 @@
 [2022-01-15T19:24:33.495] [ERROR] Logger - Could not save message
 [2022-01-15T19:25:05.767] [ERROR] Logger - Could not save message mensaje validation failed: text: Path `text` is required., user: Path `user` is required., time: Path `time` is required.
 [2022-01-15T19:26:24.353] [ERROR] Logger - Could not save message mensaje validation failed: text: Path `text` is required., user: Path `user` is required., time: Path `time` is required.
+[2022-01-23T13:11:13.364] [ERROR] Logger - TypeError: this.products.find is not a function
+    at ProductDaoFile.delete (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/Products/productDaoFile.js:63:44)
+    at Object.delete [as deleteProduct] (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/ProductsGraphql/factory.js:28:42)
+    at defaultFieldResolver (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:835:36)
+    at resolveField (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:464:18)
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:261:18
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:23:10
+    at Array.reduce (<anonymous>)
+    at promiseReduce (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:20:17)
+    at executeFieldsSerially (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:258:37)
+    at executeOperation (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:236:55)
+[2022-01-23T13:11:47.807] [ERROR] Logger - SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at ProductDaoFile.delete (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/Products/productDaoFile.js:66:28)
+    at Object.delete [as deleteProduct] (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/ProductsGraphql/factory.js:28:42)
+    at defaultFieldResolver (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:835:36)
+    at resolveField (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:464:18)
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:261:18
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:23:10
+    at Array.reduce (<anonymous>)
+    at promiseReduce (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:20:17)
+    at executeFieldsSerially (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:258:37)
+[2022-01-23T13:12:28.856] [ERROR] Logger - SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at ProductDaoFile.delete (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/Products/productDaoFile.js:66:28)
+    at Object.delete [as deleteProduct] (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/ProductsGraphql/factory.js:28:42)
+    at defaultFieldResolver (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:835:36)
+    at resolveField (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:464:18)
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:261:18
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:23:10
+    at Array.reduce (<anonymous>)
+    at promiseReduce (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:20:17)
+    at executeFieldsSerially (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:258:37)
+[2022-01-23T13:13:41.640] [ERROR] Logger - SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at ProductDaoFile.delete (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/Products/productDaoFile.js:65:28)
+    at Object.delete [as deleteProduct] (/home/develop/Documents/coderhouse/backend/proyect/heroku/src/services/ProductsGraphql/factory.js:28:42)
+    at defaultFieldResolver (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:835:36)
+    at resolveField (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:464:18)
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:261:18
+    at /home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:23:10
+    at Array.reduce (<anonymous>)
+    at promiseReduce (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/jsutils/promiseReduce.js:20:17)
+    at executeFieldsSerially (/home/develop/Documents/coderhouse/backend/proyect/heroku/node_modules/graphql/execution/execute.js:258:37)

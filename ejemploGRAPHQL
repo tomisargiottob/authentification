@@ -1,0 +1,42 @@
+# mutation{
+#   createProduct(data:{name: "TomasSargiotto", price: 52, thumbnail: "https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_gmail-256.png"}){
+#     id,
+#     name,
+#     price,
+#     thumbnail
+#   }
+# }
+
+# query{
+#   getProducts(field:"", value:"") {
+#     id,
+#     name,
+#     price
+#   }
+# }
+
+# copiar el id del producto creado y pegarlo para encontrarlo
+# query{
+#   getProduct(id: "09367990-7c47-11ec-8449-8723de2c2409") {
+#     id,
+#     name
+#   }
+# }
+
+# mutation{
+#   deleteProduct(id:"09367990-7c47-11ec-8449-8723de2c2409"){
+#     id,
+#     name,
+#     price,
+#     thumbnail
+#   }
+# }
+
+# mutation{
+#   updateProduct(id: "09367990-7c47-11ec-8449-8723de2c2409", data:{name: "TomasSargiotto", price: 152, thumbnail: "https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_gmail-256.png"}){
+#     id,
+#     name,
+#     price,
+#     thumbnail
+#   }
+# }

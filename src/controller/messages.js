@@ -16,7 +16,6 @@ async function getMessages(req, res) {
 async function createMessage(req, res) {
   const { user, text, time } = req.body;
   const userMessage = { user, text, time };
-  console.log(userMessage);
   try {
     await messages.create(userMessage);
     res.status(200).send({ message: 'success' });

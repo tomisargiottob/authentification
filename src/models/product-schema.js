@@ -14,11 +14,11 @@ const schema = buildSchema(`
   }
   type Query {
     getProduct(id: ID): Product,
-    getProducts(campo:String, valor:String): [Product],
+    getProducts(field:String, value:String): [Product],
   }
   type Mutation {
-    createProduct(datos: ProductInput!): Product,
-    updateProduct(id: ID!, datos: ProductInput): Product,
+    createProduct(data: ProductInput!): Product,
+    updateProduct(id: ID!, data: ProductInput): Product,
     deleteProduct(id: ID!): Product,
   }
 `);

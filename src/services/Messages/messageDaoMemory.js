@@ -22,9 +22,7 @@ class MessageDaoMemory extends MessageDao {
       }
       return false;
     });
-    console.log(message);
     if (message) {
-      console.log(message);
       return returnMessages(message);
     }
     throw new Error('msg not found');

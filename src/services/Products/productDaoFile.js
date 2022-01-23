@@ -28,24 +28,28 @@ class ProductDaoFile extends ProductDao {
     product.id = uuid();
     this.products.push(product);
     await fs.promises.writeFile(this.file, JSON.stringify(this.products, null, 2));
-    const products = returnProducts(this.products);
-    return products;
+    return returnProducts(product);
   }
 
   find(id) {
     const productFound = this.products.filter((product) => product.id === id);
-    if (productFound) {
+    if (productFound.length > 0) {
       return returnProducts(productFound[0]);
     }
     throw new Error('Product not found');
   }
 
-  getAll() {
+  getAll(field, value) {
     let products;
     try {
       this.products = fs.readFileSync(this.file, 'utf-8');
       this.products = JSON.parse(this.products);
-      products = returnProducts(this.products);
+      if (field && value) {
+        products = this.products.filter((product) => product[field] === value);
+        products = returnProducts(products);
+      } else {
+        products = returnProducts(this.products);
+      }
     } catch (err) {
       this.log.warn('file not created yet, creating new one');
     }
@@ -55,11 +59,13 @@ class ProductDaoFile extends ProductDao {
   async delete(id) {
     try {
       this.products = fs.readFileSync(this.file, 'utf-8');
-      this.products = JSON.parse(this.products).filter((product) => product.id !== id);
+      this.products = JSON.parse(this.products);
+      const productDeleted = this.products.find((product) => product.id === id);
+      this.products = this.products.filter((product) => product.id !== id);
       fs.writeFileSync(this.file, JSON.stringify(this.products, null, 2));
-      return true;
+      return productDeleted;
     } catch (err) {
-      this.logger.error(err);
+      this.log.error(err);
       return true;
     }
   }

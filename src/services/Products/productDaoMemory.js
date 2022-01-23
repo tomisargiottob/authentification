@@ -11,7 +11,11 @@ class ProductDaoMemory extends ProductDao {
     this.products = [];
   }
 
-  async getAll() {
+  async getAll(field, value) {
+    if (field && value) {
+      const products = this.products.filter((product) => product[field] === value);
+      return products;
+    }
     return this.products;
   }
 
@@ -23,7 +27,6 @@ class ProductDaoMemory extends ProductDao {
       return false;
     });
     if (producto) {
-      console.log(producto);
       return returnProducts(producto);
     }
     throw new Error('Product not found');
@@ -48,16 +51,12 @@ class ProductDaoMemory extends ProductDao {
   }
 
   async delete(id) {
+    const productDeleted = this.products.find((product) => product.id === id);
     this.products = this.products.filter((product) => product.id !== id);
-    return true;
+    return productDeleted;
   }
 
   async create(data) {
-    if (data.datos) {
-      // eslint-disable-next-line no-param-reassign
-      data = data.datos;
-      console.log(data);
-    }
     if (!data.name || !data.price || !data.thumbnail) {
       throw new Error('Missing information, product should have name, price and thumbnail');
     }
@@ -68,7 +67,7 @@ class ProductDaoMemory extends ProductDao {
       thumbnail: data.thumbnail,
     };
     this.products.push(product);
-    return returnProducts(this.products);
+    return returnProducts(product);
   }
 
   static getInstance(logger) {

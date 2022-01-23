@@ -6,8 +6,12 @@ const returnProducts = require('./productDTO');
 let instance;
 
 class ProductDaoMongo extends ProductDao {
-  async getAll() {
-    const productosMongo = await ProductModel.find();
+  async getAll(field, value) {
+    const where = {};
+    if (field && value) {
+      where[field] = value;
+    }
+    const productosMongo = await ProductModel.find(where);
     const productos = returnProducts(productosMongo);
     return productos;
   }
@@ -32,7 +36,6 @@ class ProductDaoMongo extends ProductDao {
       throw new Error('Missing information, product should have name, price and thumbnail');
     }
     const producto = await ProductModel.findOneAndUpdate(id, data, { upsert: false });
-    console.log(producto);
     if (producto) {
       return returnProducts(data);
     }
@@ -41,7 +44,8 @@ class ProductDaoMongo extends ProductDao {
   }
 
   async delete(id) {
-    await ProductModel.findOneAndRemove(id);
+    const product = await ProductModel.findOneAndRemove(id);
+    return product;
   }
 
   async create(data) {
