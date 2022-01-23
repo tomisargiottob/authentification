@@ -86,7 +86,28 @@
 			}
 		}
 		let productos =[];
-		
+		const options = {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				query:`{getProducts(field:"", value:"") { name,price,thumbnail}}`
+			})
+		};
+		console.log(options);
+		fetch(`${URLbackend}/graphql`, options)
+			.then(response => response.json())
+			.then(data => {
+				removeElementsByClass('product-data');	
+				refreshTable(data.data.getProducts)
+				if (data.data.getProducts.length){
+					data.data.getProducts.forEach((product)=>{
+						tableRow(product, "con-productos-space")
+					})
+				}
+			});
+		/*
 		fetch(`${URLbackend}/products`)
 			.then(response => response.json())
 			.then(data => {
@@ -98,6 +119,7 @@
 					})
 				}
 			});
+		*/
 		fetch(`${URLbackend}/messages`)
 			.then(response => response.json())
 			.then(data => {	
@@ -121,8 +143,21 @@
 			const name = form.name.value;
 			const price = form.price.value;
 			const thumbnail = form.thumbnail.value;
-
-			const body = {product:{ name, price, thumbnail }};
+			const product = {name, price, thumbnail};
+			const body = {product};
+			const mutation = `mutation {createProduct(data:{ name:"${name}", price:${price}, thumbnail:"${thumbnail}"}){name}}`
+			const options = {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+					query: mutation
+				})
+			};
+			console.log(options);
+			fetch(`${URLbackend}/graphql`,options)
+			/*
 			fetch(`${URLbackend}/products`,{
 				headers: {
 					'Accept': 'application/json',
@@ -131,6 +166,7 @@
 				method: "POST",
 				body: JSON.stringify(body)
 			})
+			*/
 			location.reload();
 		})
 		const chat = document.getElementById('chat-form')

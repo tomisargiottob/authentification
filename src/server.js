@@ -197,6 +197,13 @@ if (args.m === 'cluster') {
       deleteProduct: products.delete,
     },
     graphiql: true,
+    // customParseFn: (data) => {
+    //   console.log(data.body);
+    //   const parsedData = JSON.parse(data.body);
+    //   console.log(parsedData);
+    //   data.body = parsedData;
+    //   return data;
+    // },
   }));
 
   app.use(cors());
